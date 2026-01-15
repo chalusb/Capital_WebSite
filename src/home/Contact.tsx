@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, type FormEvent } from 'react';
 import { MessageCircle, Instagram, Facebook, Send, Loader2, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
@@ -28,7 +28,7 @@ export default function Contact() {
     },
   ];
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState('loading');
     // Simulate form submission

@@ -22,7 +22,7 @@ export default function Navigation() {
     { label: 'Contacto', href: '#contact' },
   ];
 
-  const scrollToSection = (href) => {
+  const scrollToSection = (href: string) => {
     setIsMobileMenuOpen(false);
     if (href === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });

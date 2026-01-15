@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function IntroAnimation({ onComplete }) {
+type IntroAnimationProps = {
+  onComplete?: () => void;
+};
+
+export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
